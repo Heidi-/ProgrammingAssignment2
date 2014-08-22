@@ -1,7 +1,10 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Calculating the inverse of a matrix can be a computationally expensive
+## operation. Functions in this file create an object to store a matrix and 
+## cache its inverse. 
+## Usage:
+## cache_matrix_object <- makeCacheMatrix(your_matrix)
+## your_matrix_inverse <- cacheSolve(cache_matrix_object)
 
-## Write a short comment describing this function
 
 ## makeCacheMatrix takes a matrix as an argument and creates and object to
 ##      store the matrix along with its inverse. The inverse is not stored 
@@ -34,6 +37,7 @@ cacheSolve <- function(x, ...) {
     matrix_data <- x$get()
     inv <- solve(matrix_data)
     x$setinv(inv)
+    
     inv
     
 }
